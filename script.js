@@ -6,6 +6,7 @@ async function fetchLyrics(artist, song) {
   try {
     const response = await fetch(`${apiUrl}/v1/${artist}/${song}`);
     const data = await response.json();
+    console.log(data)
     return data.lyrics;
   } catch (error) {
     console.error('Error fetching lyrics:', error);
