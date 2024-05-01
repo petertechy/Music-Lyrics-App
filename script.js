@@ -34,3 +34,24 @@ document.getElementById('lyrics-form').addEventListener('submit', async function
   // Display lyrics
   displayLyrics(lyrics);
 });
+
+// JavaScript
+function shareOnFacebook() {
+    const lyricsContent = document.getElementById('lyrics-container').innerText;
+    const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}&quote=${encodeURIComponent(lyricsContent)}`;
+    window.open(shareUrl, '_blank');
+  }
+  
+  function shareOnTwitter() {
+    const lyricsContent = document.getElementById('lyrics-container').innerText;
+    const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(lyricsContent)}`;
+    window.open(shareUrl, '_blank');
+  }
+
+  // JavaScript
+function shareOnWhatsApp() {
+    const lyricsContent = document.getElementById('lyrics-container').innerText;
+    const shareUrl = `whatsapp://send?text=${encodeURIComponent(lyricsContent)}`;
+    window.open(shareUrl, '_blank');
+  }
+  
